@@ -1,0 +1,6 @@
+﻿
+
+通用
+	Session.Add("UserId", empInfoId);
+	Session.Add("logId", fid);
+	Session.Add("logName", logName);

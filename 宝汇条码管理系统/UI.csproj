@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F53D0187-D6D4-4DFA-89C2-794E12F61D6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>宝汇条码管理系统</RootNamespace>
+    <AssemblyName>宝汇条码管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Smobiler_128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Smobiler.Utility" />
+    <Reference Include="Smobiler.Core" />
+    <Reference Include="Smobiler.Core.Controls" />
+    <Reference Include="Smobiler.Plugins" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmGenerateQRcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateQRcode.Designer.cs">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmStockLocSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmStockLocSelect.Designer.cs">
+      <DependentUpon>frmStockLocSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmStockSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmStockSelect.Designer.cs">
+      <DependentUpon>frmStockSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Sp_PickMtr.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\Sp_PickMtr.Designer.cs">
+      <DependentUpon>Sp_PickMtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\StockTransfer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory\StockTransfer.Designer.cs">
+      <DependentUpon>StockTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu\mainMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="menu\mainMenu.Designer.cs">
+      <DependentUpon>mainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu\Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="menu\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobileGlobal.cs" />
+    <Compile Include="Product\PrdPinBao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Product\PrdPinBao.Designer.cs">
+      <DependentUpon>PrdPinBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Out_Stock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sales\Out_Stock.Designer.cs">
+      <DependentUpon>Out_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="UserContors\cus_BarCodeScan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\cus_BarCodeScan.Designer.cs">
+      <DependentUpon>cus_BarCodeScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\cus_Titel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\cus_Titel.Designer.cs">
+      <DependentUpon>cus_Titel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\MaterialListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\MaterialListView.Designer.cs">
+      <DependentUpon>MaterialListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\simpMessageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\simpMessageBox.Designer.cs">
+      <DependentUpon>simpMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\Search.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\tx_Material.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\tx_Material.Designer.cs">
+      <DependentUpon>tx_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\tx_Stock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\tx_Stock.Designer.cs">
+      <DependentUpon>tx_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\uc_StockLocListRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\uc_StockLocListRow.Designer.cs">
+      <DependentUpon>uc_StockLocListRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserContors\uc_StockListRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\uc_StockListRow.Designer.cs">
+      <DependentUpon>uc_StockListRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\login.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmGenerateQRcode.resx">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmStockLocSelect.resx">
+      <DependentUpon>frmStockLocSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmStockSelect.resx">
+      <DependentUpon>frmStockSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Sp_PickMtr.resx">
+      <DependentUpon>Sp_PickMtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\StockTransfer.resx">
+      <DependentUpon>StockTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu\mainMenu.resx">
+      <DependentUpon>mainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\PrdPinBao.resx">
+      <DependentUpon>PrdPinBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Out_Stock.resx">
+      <DependentUpon>Out_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\cus_BarCodeScan.resx">
+      <DependentUpon>cus_BarCodeScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\cus_Titel.resx">
+      <DependentUpon>cus_Titel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\MaterialListView.resx">
+      <DependentUpon>MaterialListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\simpMessageBox.resx">
+      <DependentUpon>simpMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\tx_Material.resx">
+      <DependentUpon>tx_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\tx_Stock.resx">
+      <DependentUpon>tx_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\uc_StockLocListRow.resx">
+      <DependentUpon>uc_StockLocListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\uc_StockListRow.resx">
+      <DependentUpon>uc_StockListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Smobiler.ico" />
+    <Content Include="Smobiler_128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceHelper\ServiceHelper.csproj">
+      <Project>{e671a593-4757-4deb-afe5-e5de1f7d31fb}</Project>
+      <Name>ServiceHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
