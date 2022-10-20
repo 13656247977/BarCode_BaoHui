@@ -25,21 +25,24 @@ namespace 宝汇条码管理系统.UserContors
             // 
             // label1
             // 
-            this.label1.Border = new Smobiler.Core.Controls.Border(1F);
-            this.label1.BorderRadius = 20;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
+            this.label1.BorderColor = System.Drawing.Color.LightGray;
+            this.label1.BorderRadius = 5;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Location = new System.Drawing.Point(75, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 35);
-            this.label1.Text = "label1";
             // 
             // tx_searchStr
             // 
             this.tx_searchStr.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tx_searchStr.FontSize = 16F;
             this.tx_searchStr.Location = new System.Drawing.Point(35, 8);
             this.tx_searchStr.Margin = new Smobiler.Core.Controls.Margin(20F, 5F, 35F, 2F);
             this.tx_searchStr.Name = "tx_searchStr";
-            this.tx_searchStr.Size = new System.Drawing.Size(233, 35);
+            this.tx_searchStr.Size = new System.Drawing.Size(250, 35);
             // 
             // ibt_Search
             // 

@@ -27,9 +27,7 @@ namespace 宝汇条码管理系统.menu
             this.tpc2 = new Smobiler.Core.Controls.TabPageControl();
             this.tpc3 = new Smobiler.Core.Controls.TabPageControl();
             this.tpc4 = new Smobiler.Core.Controls.TabPageControl();
-            this.srcFormSearch = new 宝汇条码管理系统.UserContors.Search();
-            this.listView1 = new Smobiler.Core.Controls.ListView();
-            this.cus_BarCodeScan1 = new 宝汇条码管理系统.UserContors.cus_BarCodeScan();
+            this.billList = new Smobiler.Core.Controls.ListView();
             this.panel1 = new Smobiler.Core.Controls.Panel();
             this.label2 = new Smobiler.Core.Controls.Label();
             this.tx_MaterialName = new Smobiler.Core.Controls.TextBox();
@@ -50,12 +48,13 @@ namespace 宝汇条码管理系统.menu
             this.label12 = new Smobiler.Core.Controls.Label();
             this.tx_auxUnitId = new Smobiler.Core.Controls.TextBox();
             this.label13 = new Smobiler.Core.Controls.Label();
-            this.label14 = new Smobiler.Core.Controls.Label();
             this.tx_auxQty = new Smobiler.Core.Controls.TextBox();
-            this.textBox14 = new Smobiler.Core.Controls.TextBox();
-            this.draf = new Smobiler.Core.Controls.Button();
-            this.search1 = new 宝汇条码管理系统.UserContors.Search();
             this.listView2 = new Smobiler.Core.Controls.ListView();
+            this.srcFormSearch = new 宝汇条码管理系统.UserContors.Search();
+            this.cus_BarCodeScan1 = new 宝汇条码管理系统.UserContors.cus_BarCodeScan();
+            this.search1 = new 宝汇条码管理系统.UserContors.Search();
+            this.panel2 = new Smobiler.Core.Controls.Panel();
+            this.draf = new Smobiler.Core.Controls.Button();
             // 
             // title
             // 
@@ -102,7 +101,7 @@ namespace 宝汇条码管理系统.menu
             // 
             this.tpc1.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.srcFormSearch,
-            this.listView1});
+            this.billList});
             this.tpc1.Direction = Smobiler.Core.Controls.LayoutDirection.Row;
             this.tpc1.Name = "tpc1";
             // 
@@ -127,30 +126,14 @@ namespace 宝汇条码管理系统.menu
             this.tpc4.Direction = Smobiler.Core.Controls.LayoutDirection.Row;
             this.tpc4.Name = "tpc4";
             // 
-            // srcFormSearch
+            // billList
             // 
-            this.srcFormSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.srcFormSearch.Name = "srcFormSearch";
-            this.srcFormSearch.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
-            this.srcFormSearch.SearchText = "";
-            this.srcFormSearch.Size = new System.Drawing.Size(300, 40);
-            this.srcFormSearch.WaterMarkText = "";
-            // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 75);
-            this.listView1.Name = "listView1";
-            this.listView1.PageSizeTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.listView1.Size = new System.Drawing.Size(300, 300);
-            // 
-            // cus_BarCodeScan1
-            // 
-            this.cus_BarCodeScan1.barCodeText = "";
-            this.cus_BarCodeScan1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cus_BarCodeScan1.Location = new System.Drawing.Point(18, 30);
-            this.cus_BarCodeScan1.Name = "cus_BarCodeScan1";
-            this.cus_BarCodeScan1.Size = new System.Drawing.Size(300, 35);
+            this.billList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.billList.Location = new System.Drawing.Point(0, 75);
+            this.billList.Name = "billList";
+            this.billList.PageSizeTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
+            this.billList.Size = new System.Drawing.Size(300, 300);
+            this.billList.TemplateControlName = "BillListView";
             // 
             // panel1
             // 
@@ -175,10 +158,8 @@ namespace 宝汇条码管理系统.menu
             this.label12,
             this.tx_auxUnitId,
             this.label13,
-            this.label14,
             this.tx_auxQty,
-            this.textBox14,
-            this.draf});
+            this.panel2});
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(0, 459);
@@ -443,21 +424,6 @@ namespace 宝汇条码管理系统.menu
             this.label13.Size = new System.Drawing.Size(60, 28);
             this.label13.Text = "辅数量";
             // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Bold = true;
-            this.label14.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label14.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.Flex = 15;
-            this.label14.FontSize = 14F;
-            this.label14.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label14.Location = new System.Drawing.Point(0, 403);
-            this.label14.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 28);
-            this.label14.Text = "label1";
-            // 
             // tx_auxQty
             // 
             this.tx_auxQty.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
@@ -469,26 +435,31 @@ namespace 宝汇条码管理系统.menu
             this.tx_auxQty.Name = "tx_auxQty";
             this.tx_auxQty.Size = new System.Drawing.Size(223, 28);
             // 
-            // textBox14
+            // listView2
             // 
-            this.textBox14.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.textBox14.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox14.Flex = 85;
-            this.textBox14.FontSize = 16F;
-            this.textBox14.Location = new System.Drawing.Point(63, 403);
-            this.textBox14.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(223, 28);
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Location = new System.Drawing.Point(0, 75);
+            this.listView2.Name = "listView2";
+            this.listView2.PageSizeTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
+            this.listView2.Size = new System.Drawing.Size(300, 300);
             // 
-            // draf
+            // srcFormSearch
             // 
-            this.draf.Bold = true;
-            this.draf.FontSize = 18F;
-            this.draf.Location = new System.Drawing.Point(113, 374);
-            this.draf.Name = "draf";
-            this.draf.Size = new System.Drawing.Size(80, 28);
-            this.draf.Text = "暂 存";
+            this.srcFormSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.srcFormSearch.Name = "srcFormSearch";
+            this.srcFormSearch.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
+            this.srcFormSearch.SearchText = "";
+            this.srcFormSearch.Size = new System.Drawing.Size(300, 40);
+            this.srcFormSearch.WaterMarkText = "";
+            this.srcFormSearch.SearchButtonPress += new System.EventHandler(this.srcFormSearch_SearchButtonPress);
+            // 
+            // cus_BarCodeScan1
+            // 
+            this.cus_BarCodeScan1.barCodeText = "";
+            this.cus_BarCodeScan1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cus_BarCodeScan1.Location = new System.Drawing.Point(18, 30);
+            this.cus_BarCodeScan1.Name = "cus_BarCodeScan1";
+            this.cus_BarCodeScan1.Size = new System.Drawing.Size(300, 35);
             // 
             // search1
             // 
@@ -499,13 +470,23 @@ namespace 宝汇条码管理系统.menu
             this.search1.Size = new System.Drawing.Size(300, 40);
             this.search1.WaterMarkText = "";
             // 
-            // listView2
+            // panel2
             // 
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Location = new System.Drawing.Point(0, 75);
-            this.listView2.Name = "listView2";
-            this.listView2.PageSizeTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.listView2.Size = new System.Drawing.Size(300, 300);
+            this.panel2.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.draf});
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 378);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 36);
+            // 
+            // draf
+            // 
+            this.draf.Bold = true;
+            this.draf.FontSize = 18F;
+            this.draf.Location = new System.Drawing.Point(95, 5);
+            this.draf.Name = "draf";
+            this.draf.Size = new System.Drawing.Size(80, 28);
+            this.draf.Text = "暂 存";
             // 
             // Out_Stock
             // 
@@ -526,7 +507,7 @@ namespace 宝汇条码管理系统.menu
         private Smobiler.Core.Controls.TabPageControl tpc3;
         private Smobiler.Core.Controls.TabPageControl tpc4;
         private UserContors.Search srcFormSearch;
-        private Smobiler.Core.Controls.ListView listView1;
+        private Smobiler.Core.Controls.ListView billList;
         private UserContors.cus_BarCodeScan cus_BarCodeScan1;
         private Smobiler.Core.Controls.Panel panel1;
         private Smobiler.Core.Controls.Label label2;
@@ -548,11 +529,10 @@ namespace 宝汇条码管理系统.menu
         private Smobiler.Core.Controls.Label label12;
         private Smobiler.Core.Controls.TextBox tx_auxUnitId;
         private Smobiler.Core.Controls.Label label13;
-        private Smobiler.Core.Controls.Label label14;
         private Smobiler.Core.Controls.TextBox tx_auxQty;
-        private Smobiler.Core.Controls.TextBox textBox14;
-        private Smobiler.Core.Controls.Button draf;
         private UserContors.Search search1;
         private Smobiler.Core.Controls.ListView listView2;
+        private Smobiler.Core.Controls.Panel panel2;
+        private Smobiler.Core.Controls.Button draf;
     }
 }

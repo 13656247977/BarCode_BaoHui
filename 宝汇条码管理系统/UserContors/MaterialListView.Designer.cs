@@ -34,10 +34,6 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_stockId = new Smobiler.Core.Controls.TextBox();
             this.label7 = new Smobiler.Core.Controls.Label();
             this.tx_stockLocId = new Smobiler.Core.Controls.TextBox();
-            this.label8 = new Smobiler.Core.Controls.Label();
-            this.tx_stockId_desc = new Smobiler.Core.Controls.TextBox();
-            this.label9 = new Smobiler.Core.Controls.Label();
-            this.tx_stockLocId_desc = new Smobiler.Core.Controls.TextBox();
             this.label10 = new Smobiler.Core.Controls.Label();
             this.tx_UnitId = new Smobiler.Core.Controls.TextBox();
             this.label11 = new Smobiler.Core.Controls.Label();
@@ -45,9 +41,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label12 = new Smobiler.Core.Controls.Label();
             this.tx_auxUnitId = new Smobiler.Core.Controls.TextBox();
             this.label13 = new Smobiler.Core.Controls.Label();
-            this.label14 = new Smobiler.Core.Controls.Label();
             this.tx_auxQty = new Smobiler.Core.Controls.TextBox();
-            this.textBox14 = new Smobiler.Core.Controls.TextBox();
             // 
             // panel1
             // 
@@ -67,10 +61,6 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_stockId,
             this.label7,
             this.tx_stockLocId,
-            this.label8,
-            this.tx_stockId_desc,
-            this.label9,
-            this.tx_stockLocId_desc,
             this.label10,
             this.tx_UnitId,
             this.label11,
@@ -78,9 +68,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label12,
             this.tx_auxUnitId,
             this.label13,
-            this.label14,
-            this.tx_auxQty,
-            this.textBox14});
+            this.tx_auxQty});
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(0, 459);
@@ -97,7 +85,7 @@ namespace 宝汇条码管理系统.UserContors
             this.lb_MaterialNumber.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.lb_MaterialNumber.Name = "lb_MaterialNumber";
             this.lb_MaterialNumber.Size = new System.Drawing.Size(60, 28);
-            this.lb_MaterialNumber.Text = "物料编码";
+            this.lb_MaterialNumber.Text = "编码";
             // 
             // tx_MaterialId
             // 
@@ -126,7 +114,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label2.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 28);
-            this.label2.Text = "物料名称";
+            this.label2.Text = "品名";
             // 
             // tx_MaterialName
             // 
@@ -154,7 +142,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label3.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 28);
-            this.label3.Text = "物料规格";
+            this.label3.Text = "规格";
             // 
             // tx_MaterialModel
             // 
@@ -182,7 +170,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label4.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 28);
-            this.label4.Text = "辅助属性";
+            this.label4.Text = "属性";
             // 
             // tx_AuxpropId
             // 
@@ -238,7 +226,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label6.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 28);
-            this.label6.Text = "调出仓库";
+            this.label6.Text = "仓库";
             // 
             // tx_stockId
             // 
@@ -265,7 +253,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label7.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 28);
-            this.label7.Text = "调出仓位";
+            this.label7.Text = "仓位";
             // 
             // tx_stockLocId
             // 
@@ -279,59 +267,6 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_stockLocId.ReadOnly = true;
             this.tx_stockLocId.Size = new System.Drawing.Size(223, 28);
             // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Bold = true;
-            this.label8.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label8.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Flex = 15;
-            this.label8.FontSize = 14F;
-            this.label8.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label8.Location = new System.Drawing.Point(0, 217);
-            this.label8.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 28);
-            this.label8.Text = "调入仓库";
-            // 
-            // tx_stockId_desc
-            // 
-            this.tx_stockId_desc.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.tx_stockId_desc.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.tx_stockId_desc.Flex = 85;
-            this.tx_stockId_desc.FontSize = 16F;
-            this.tx_stockId_desc.Location = new System.Drawing.Point(63, 217);
-            this.tx_stockId_desc.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
-            this.tx_stockId_desc.Name = "tx_stockId_desc";
-            this.tx_stockId_desc.ReadOnly = true;
-            this.tx_stockId_desc.Size = new System.Drawing.Size(223, 28);
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Bold = true;
-            this.label9.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label9.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Flex = 15;
-            this.label9.FontSize = 14F;
-            this.label9.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label9.Location = new System.Drawing.Point(0, 248);
-            this.label9.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 28);
-            this.label9.Text = "调入仓位";
-            // 
-            // tx_stockLocId_desc
-            // 
-            this.tx_stockLocId_desc.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.tx_stockLocId_desc.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.tx_stockLocId_desc.Flex = 85;
-            this.tx_stockLocId_desc.FontSize = 16F;
-            this.tx_stockLocId_desc.Location = new System.Drawing.Point(63, 248);
-            this.tx_stockLocId_desc.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
-            this.tx_stockLocId_desc.Name = "tx_stockLocId_desc";
-            this.tx_stockLocId_desc.Size = new System.Drawing.Size(223, 28);
-            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.White;
@@ -341,7 +276,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label10.Flex = 15;
             this.label10.FontSize = 14F;
             this.label10.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label10.Location = new System.Drawing.Point(0, 279);
+            this.label10.Location = new System.Drawing.Point(0, 217);
             this.label10.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 28);
@@ -353,7 +288,7 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_UnitId.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.tx_UnitId.Flex = 85;
             this.tx_UnitId.FontSize = 16F;
-            this.tx_UnitId.Location = new System.Drawing.Point(63, 279);
+            this.tx_UnitId.Location = new System.Drawing.Point(63, 217);
             this.tx_UnitId.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
             this.tx_UnitId.Name = "tx_UnitId";
             this.tx_UnitId.ReadOnly = true;
@@ -368,7 +303,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label11.Flex = 15;
             this.label11.FontSize = 14F;
             this.label11.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label11.Location = new System.Drawing.Point(0, 310);
+            this.label11.Location = new System.Drawing.Point(0, 248);
             this.label11.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 28);
@@ -380,7 +315,7 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_qty.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.tx_qty.Flex = 85;
             this.tx_qty.FontSize = 16F;
-            this.tx_qty.Location = new System.Drawing.Point(63, 310);
+            this.tx_qty.Location = new System.Drawing.Point(63, 248);
             this.tx_qty.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
             this.tx_qty.Name = "tx_qty";
             this.tx_qty.Size = new System.Drawing.Size(223, 28);
@@ -394,7 +329,7 @@ namespace 宝汇条码管理系统.UserContors
             this.label12.Flex = 15;
             this.label12.FontSize = 14F;
             this.label12.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label12.Location = new System.Drawing.Point(0, 341);
+            this.label12.Location = new System.Drawing.Point(0, 279);
             this.label12.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 28);
@@ -406,7 +341,7 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_auxUnitId.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.tx_auxUnitId.Flex = 85;
             this.tx_auxUnitId.FontSize = 16F;
-            this.tx_auxUnitId.Location = new System.Drawing.Point(63, 341);
+            this.tx_auxUnitId.Location = new System.Drawing.Point(63, 279);
             this.tx_auxUnitId.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
             this.tx_auxUnitId.Name = "tx_auxUnitId";
             this.tx_auxUnitId.ReadOnly = true;
@@ -421,26 +356,11 @@ namespace 宝汇条码管理系统.UserContors
             this.label13.Flex = 15;
             this.label13.FontSize = 14F;
             this.label13.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label13.Location = new System.Drawing.Point(0, 372);
+            this.label13.Location = new System.Drawing.Point(0, 310);
             this.label13.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 28);
             this.label13.Text = "输数量";
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Bold = true;
-            this.label14.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label14.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.Flex = 15;
-            this.label14.FontSize = 14F;
-            this.label14.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label14.Location = new System.Drawing.Point(0, 403);
-            this.label14.Margin = new Smobiler.Core.Controls.Margin(3F, 3F, 0F, 0F);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 28);
-            this.label14.Text = "label1";
             // 
             // tx_auxQty
             // 
@@ -448,22 +368,10 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_auxQty.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.tx_auxQty.Flex = 85;
             this.tx_auxQty.FontSize = 16F;
-            this.tx_auxQty.Location = new System.Drawing.Point(63, 372);
+            this.tx_auxQty.Location = new System.Drawing.Point(63, 310);
             this.tx_auxQty.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
             this.tx_auxQty.Name = "tx_auxQty";
             this.tx_auxQty.Size = new System.Drawing.Size(223, 28);
-            // 
-            // textBox14
-            // 
-            this.textBox14.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.textBox14.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox14.Flex = 85;
-            this.textBox14.FontSize = 16F;
-            this.textBox14.Location = new System.Drawing.Point(63, 403);
-            this.textBox14.Margin = new Smobiler.Core.Controls.Margin(0F, 3F, 0F, 0F);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(223, 28);
             // 
             // MaterialListView
             // 
@@ -492,10 +400,6 @@ namespace 宝汇条码管理系统.UserContors
         private Smobiler.Core.Controls.TextBox tx_stockId;
         private Smobiler.Core.Controls.Label label7;
         private Smobiler.Core.Controls.TextBox tx_stockLocId;
-        private Smobiler.Core.Controls.Label label8;
-        private Smobiler.Core.Controls.TextBox tx_stockId_desc;
-        private Smobiler.Core.Controls.Label label9;
-        private Smobiler.Core.Controls.TextBox tx_stockLocId_desc;
         private Smobiler.Core.Controls.Label label10;
         private Smobiler.Core.Controls.TextBox tx_UnitId;
         private Smobiler.Core.Controls.Label label11;
@@ -503,8 +407,6 @@ namespace 宝汇条码管理系统.UserContors
         private Smobiler.Core.Controls.Label label12;
         private Smobiler.Core.Controls.TextBox tx_auxUnitId;
         private Smobiler.Core.Controls.Label label13;
-        private Smobiler.Core.Controls.Label label14;
         private Smobiler.Core.Controls.TextBox tx_auxQty;
-        private Smobiler.Core.Controls.TextBox textBox14;
     }
 }

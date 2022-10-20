@@ -30,12 +30,12 @@ namespace 宝汇条码管理系统.menu
                 //case "sp_Prick":  //生产领料
                 //    this.Show(new Sp_PickMtr());
                 //    break;
-                //case "打包":
-                //    this.Show(new PrdPinBao());
-                //    break;
-                //case "拆包":
-                //    this.Show(new StocklocTransfer());
-                //    break;
+                    //case "打包":
+                    //    this.Show(new PrdPinBao());
+                    //    break;
+                    //case "拆包":
+                    //    this.Show(new StocklocTransfer());
+                    //    break;
             }
         }
 

@@ -157,6 +157,12 @@
     <Compile Include="UserContors\cus_Titel.Designer.cs">
       <DependentUpon>cus_Titel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserContors\BillListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\BillListView.Designer.cs">
+      <DependentUpon>BillListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserContors\MaterialListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserContors\cus_Titel.resx">
       <DependentUpon>cus_Titel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\BillListView.resx">
+      <DependentUpon>BillListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserContors\MaterialListView.resx">
       <DependentUpon>MaterialListView.cs</DependentUpon>
