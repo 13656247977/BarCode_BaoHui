@@ -79,60 +79,60 @@ namespace ServiceHelper
                 return dataValue;
             }
             DataRow dr = dt.Rows[0];
-            if (info.qty > StringParse.ObjectToDecimal(dr["FQTY"]))
+            if (info.qty > SParse.ToDecimal(dr["FQTY"]))
             {
                 throw new Exception("调拔数量大于库存数量，请确认！");
             }
-            if (info.auxQty > StringParse.ObjectToDecimal(dr["FAUXQTY"]))
+            if (info.auxQty > SParse.ToDecimal(dr["FAUXQTY"]))
             {
                 throw new Exception("调拔数量大于库存数量，请确认！");
             }
             //设置单据头
             StkTransferHead headData = new StkTransferHead();
             headData.FBillTypeID = new BaseData { FNumber = "ZJDB01_SYS" };
-            headData.StockOutOrgId = new BaseData { FNumber = StringParse.ObjectToString(dr["FSTOCKSTATUSNUMBER"]) };
-            headData.StockOrgId = new BaseData { FNumber = StringParse.ObjectToString(dr["FSTOCKSTATUSNUMBER"]) };
-            headData.FOwnerTypeOutIdHead = StringParse.ObjectToString(dr["FOWNERTYPEID"]);
-            headData.FOwnerOutIdHead = new BaseData { FNumber = StringParse.ObjectToString(dr["FOWNERNUMBER"]) };
-            headData.FOwnerTypeIdHead = StringParse.ObjectToString(dr["FOWNERTYPEID"]);
-            headData.FOwnerIdHead = new BaseData { FNumber = StringParse.ObjectToString(dr["FOWNERNUMBER"]) };
+            headData.StockOutOrgId = new BaseData { FNumber = SParse.ToString(dr["FSTOCKSTATUSNUMBER"]) };
+            headData.StockOrgId = new BaseData { FNumber = SParse.ToString(dr["FSTOCKSTATUSNUMBER"]) };
+            headData.FOwnerTypeOutIdHead = SParse.ToString(dr["FOWNERTYPEID"]);
+            headData.FOwnerOutIdHead = new BaseData { FNumber = SParse.ToString(dr["FOWNERNUMBER"]) };
+            headData.FOwnerTypeIdHead = SParse.ToString(dr["FOWNERTYPEID"]);
+            headData.FOwnerIdHead = new BaseData { FNumber = SParse.ToString(dr["FOWNERNUMBER"]) };
             //设置单据体
             StkTransferEntry entryData = new StkTransferEntry();
-            entryData.FMaterialId = new BaseData { FNumber = StringParse.ObjectToString(dr["FMATERIALNUMBER"]) };
+            entryData.FMaterialId = new BaseData { FNumber = SParse.ToString(dr["FMATERIALNUMBER"]) };
             entryData.FAuxPropId =
                 new FlexsValue
                 {
                     FAUXPROPID__FF100002 =
-                                 new BaseData { FNumber = StringParse.ObjectToString(dr["FCZNUMBER"]) },
+                                 new BaseData { FNumber = SParse.ToString(dr["FCZNUMBER"]) },
                     FAUXPROPID__FF100003 =
-                                 new BaseData { FNumber = StringParse.ObjectToString(dr["FCDNUMBER"]) },
+                                 new BaseData { FNumber = SParse.ToString(dr["FCDNUMBER"]) },
                     FAUXPROPID__FF100004 =
-                                    string.IsNullOrWhiteSpace(StringParse.ObjectToString(dr["FDZCD"])) ? "C" : StringParse.ObjectToString(dr["FDZCD"]),
+                                    string.IsNullOrWhiteSpace(SParse.ToString(dr["FDZCD"])) ? "C" : SParse.ToString(dr["FDZCD"]),
                     FAUXPROPID__FF100005 =
-                                 new BaseData { FNumber = StringParse.ObjectToString(dr["FBMNUMBER"]) },
+                                 new BaseData { FNumber = SParse.ToString(dr["FBMNUMBER"]) },
                     FAUXPROPID__FF100013 =
-                                 new BaseData { FNumber = StringParse.ObjectToString(dr["FTYGCNUMBER"]) }
+                                 new BaseData { FNumber = SParse.ToString(dr["FTYGCNUMBER"]) }
                 };
             //来源信息
-            entryData.FSrcStockId = new BaseData { FNumber = StringParse.ObjectToString(dr["FSTOCKNUMBER"]) };
-            entryData.FSrcStockLocId = StringParse.ObjectToLong(dr["FSTOCKLOCID"]) == 0 ? "" :
-                                       StringParse.ObjectToLong(dr["FSTOCKLOCID"]).ToString();
-            entryData.FLot = new BaseData { FNumber = StringParse.ObjectToString(dr["FLOT_TEXT"]) };
-            entryData.FSrcStockStatusId = new BaseData { FNumber = StringParse.ObjectToString(dr["FSTOCKSTATUSNUMBER"]) };
-            entryData.FOwnerTypeOutId = StringParse.ObjectToString(dr["FOWNERTYPEID"]);
-            entryData.FOwnerOutId = new BaseData { FNumber = StringParse.ObjectToString(dr["FOWNERNUMBER"]) };
-            entryData.FKeeperTypeOutId = StringParse.ObjectToString(dr["FKEEPERTYPEID"]);
-            entryData.FKeeperOutId = new BaseData { FNumber = StringParse.ObjectToString(dr["FKEEPERNUMBER"]) };
-            entryData.FUnitID = new BaseData { FNumber = StringParse.ObjectToString(dr["FBASEUNITNUMBER"]) };
-            entryData.FSecUnitId = new BaseData { FNumber = StringParse.ObjectToString(dr["FAUXUNITNUMBER"]) };
-            entryData.FBaseUnitId = new BaseData { FNumber = StringParse.ObjectToString(dr["FBASEUNITNUMBER"]) };
+            entryData.FSrcStockId = new BaseData { FNumber = SParse.ToString(dr["FSTOCKNUMBER"]) };
+            entryData.FSrcStockLocId = SParse.ToLong(dr["FSTOCKLOCID"]) == 0 ? "" :
+                                       SParse.ToLong(dr["FSTOCKLOCID"]).ToString();
+            entryData.FLot = new BaseData { FNumber = SParse.ToString(dr["FLOT_TEXT"]) };
+            entryData.FSrcStockStatusId = new BaseData { FNumber = SParse.ToString(dr["FSTOCKSTATUSNUMBER"]) };
+            entryData.FOwnerTypeOutId = SParse.ToString(dr["FOWNERTYPEID"]);
+            entryData.FOwnerOutId = new BaseData { FNumber = SParse.ToString(dr["FOWNERNUMBER"]) };
+            entryData.FKeeperTypeOutId = SParse.ToString(dr["FKEEPERTYPEID"]);
+            entryData.FKeeperOutId = new BaseData { FNumber = SParse.ToString(dr["FKEEPERNUMBER"]) };
+            entryData.FUnitID = new BaseData { FNumber = SParse.ToString(dr["FBASEUNITNUMBER"]) };
+            entryData.FSecUnitId = new BaseData { FNumber = SParse.ToString(dr["FAUXUNITNUMBER"]) };
+            entryData.FBaseUnitId = new BaseData { FNumber = SParse.ToString(dr["FBASEUNITNUMBER"]) };
             entryData.FQty = info.qty;
             entryData.FSecQty = info.auxQty;
             //目标信息
             string stockSql = string.Format("SELECT FNUMBER FROM T_BD_STOCK WHERE FSTOCKID={0}", info.stockId);
             entryData.FDestStockId = new BaseData
             {
-                FNumber = StringParse.ObjectToString(ServiceHelper.DbServiceHepler.ExecuteScalar(stockSql))
+                FNumber = SParse.ToString(ServiceHelper.DbServiceHepler.ExecuteScalar(stockSql))
             };
             entryData.FDestStockLocId = new StockLoc_dest
             {
@@ -141,11 +141,11 @@ namespace ServiceHelper
             };
             entryData.FDestLot = entryData.FLot;
            //entryData.FDestStockLocId = info.stockLocId;
-           entryData.FDestStockStatusId = new BaseData { FNumber = StringParse.ObjectToString(dr["FSTOCKSTATUSNUMBER"]) };
-            entryData.FOwnerTypeId = StringParse.ObjectToString(dr["FOWNERTYPEID"]);
-            entryData.FOwnerId = new BaseData { FNumber = StringParse.ObjectToString(dr["FOWNERNUMBER"]) };
+           entryData.FDestStockStatusId = new BaseData { FNumber = SParse.ToString(dr["FSTOCKSTATUSNUMBER"]) };
+            entryData.FOwnerTypeId = SParse.ToString(dr["FOWNERTYPEID"]);
+            entryData.FOwnerId = new BaseData { FNumber = SParse.ToString(dr["FOWNERNUMBER"]) };
             entryData.FKeeperTypeId = dr["FKEEPERTYPEID"].ToString();
-            entryData.FKeeperId = new BaseData { FNumber = StringParse.ObjectToString(dr["FKEEPERNUMBER"]) };
+            entryData.FKeeperId = new BaseData { FNumber = SParse.ToString(dr["FKEEPERNUMBER"]) };
 
             ///单据信息组合
             //设置单据体

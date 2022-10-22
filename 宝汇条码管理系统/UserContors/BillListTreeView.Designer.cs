@@ -3,7 +3,7 @@ using System;
 
 namespace 宝汇条码管理系统.UserContors
 {
-    partial class BillListView : Smobiler.Core.Controls.MobileUserControl
+    partial class BillListTreeView : Smobiler.Core.Controls.MobileUserControl
     {
         #region "SmobilerUserControl generated code "
 
@@ -19,7 +19,7 @@ namespace 宝汇条码管理系统.UserContors
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.bl_panel = new Smobiler.Core.Controls.Panel();
+            this.panel1 = new Smobiler.Core.Controls.Panel();
             this.lb_MaterialNumber = new Smobiler.Core.Controls.Label();
             this.tx_MaterialId = new Smobiler.Core.Controls.TextBox();
             this.label4 = new Smobiler.Core.Controls.Label();
@@ -37,11 +37,12 @@ namespace 宝汇条码管理系统.UserContors
             this.tx_JH = new Smobiler.Core.Controls.TextBox();
             this.ck_scanBar = new Smobiler.Core.Controls.CheckBox();
             // 
-            // bl_panel
+            // panel1
             // 
-            this.bl_panel.BackColor = System.Drawing.Color.White;
-            this.bl_panel.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.bl_panel.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 2F);
+            this.panel1.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.lb_MaterialNumber,
             this.tx_MaterialId,
             this.label4,
@@ -58,11 +59,9 @@ namespace 宝汇条码管理系统.UserContors
             this.label3,
             this.tx_JH,
             this.ck_scanBar});
-            this.bl_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bl_panel.Name = "bl_panel";
-            this.bl_panel.Size = new System.Drawing.Size(0, 188);
-            this.bl_panel.Touchable = true;
-            this.bl_panel.Press += new System.EventHandler(this.panel1_Press);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(0, 190);
             // 
             // lb_MaterialNumber
             // 
@@ -286,19 +285,19 @@ namespace 宝汇条码管理系统.UserContors
             this.ck_scanBar.Name = "ck_scanBar";
             this.ck_scanBar.Size = new System.Drawing.Size(22, 22);
             // 
-            // BillListView
+            // BillListTreeView
             // 
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.bl_panel});
+            this.panel1});
             this.Layout = Smobiler.Core.Controls.LayoutPosition.Relative;
-            this.Size = new System.Drawing.Size(0, 188);
+            this.Size = new System.Drawing.Size(0, 192);
             this.Load += new System.EventHandler(this.MaterialListView_Load);
-            this.Name = "BillListView";
+            this.Name = "BillListTreeView";
 
         }
         #endregion
 
-        private Smobiler.Core.Controls.Panel bl_panel;
+        private Smobiler.Core.Controls.Panel panel1;
         private Smobiler.Core.Controls.Label lb_MaterialNumber;
         private Smobiler.Core.Controls.TextBox tx_MaterialId;
         private Smobiler.Core.Controls.Label label4;

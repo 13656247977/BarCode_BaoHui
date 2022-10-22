@@ -10,20 +10,15 @@ namespace 宝汇条码管理系统.UserContors
 {
     ////ToolboxItem用于控制是否添加自定义控件到工具箱，true添加，false不添加
     //[System.ComponentModel.ToolboxItem(true)]
-    partial class BillListView : Smobiler.Core.Controls.MobileUserControl
+    partial class BillListTreeView : Smobiler.Core.Controls.MobileUserControl
     {
-        public BillListView() : base()
+        public BillListTreeView() : base()
         {
             //This call is required by the SmobilerUserControl.
             InitializeComponent();
         }
 
         private void MaterialListView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Press(object sender, EventArgs e)
         {
 
         }

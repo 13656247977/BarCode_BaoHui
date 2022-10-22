@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ServiceHelper
 {
-    public class StringParse
+    public static class SParse
     {
         //解析barCode字符串
-        public static string ObjectToBarCode(Object value)
+        public static string ToBarCode(Object value)
         {
             string returnValue = string.Empty;
             if (value == null || value is null)
@@ -29,7 +29,7 @@ namespace ServiceHelper
             }
             return returnValue;
         }
-        public static string ObjectToString(Object value)
+        public static string ToString(Object value)
         {
             string returnValue = string.Empty;
             if (value == null || value is null)
@@ -42,7 +42,7 @@ namespace ServiceHelper
             }
             return returnValue;
         }
-        public static long ObjectToLong(Object value)
+        public static long ToLong(Object value)
         {
             long returnValue = 0L;
             if (value == null || value is null)
@@ -56,7 +56,7 @@ namespace ServiceHelper
             return returnValue;
         }
 
-        public static int ObjectToInt(Object value)
+        public static int ToInt(Object value)
         {
             int returnValue = 0;
             if (value == null || value is null)
@@ -69,7 +69,7 @@ namespace ServiceHelper
             }
             return returnValue;
         }
-        public static decimal ObjectToDecimal(Object value)
+        public static decimal ToDecimal(Object value)
         {
             decimal returnValue = 0L;
             if (value == null || value is null)

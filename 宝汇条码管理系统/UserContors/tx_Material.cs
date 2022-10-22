@@ -43,7 +43,7 @@ namespace 宝汇条码管理系统.UserContors
         {
             get
             {
-                return StringParse.ObjectToLong(this.tx_MaterialId.BindDataValue);
+                return SParse.ToLong(this.tx_MaterialId.BindDataValue);
             }
         }
         private void ibt_Material_Press(object sender, EventArgs e)

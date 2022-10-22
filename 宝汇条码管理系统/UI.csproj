@@ -145,6 +145,12 @@
       <DependentUpon>Out_Stock.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="UserContors\BillListTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserContors\BillListTreeView.Designer.cs">
+      <DependentUpon>BillListTreeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserContors\cus_BarCodeScan.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\Out_Stock.resx">
       <DependentUpon>Out_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserContors\BillListTreeView.resx">
+      <DependentUpon>BillListTreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserContors\cus_BarCodeScan.resx">
       <DependentUpon>cus_BarCodeScan.cs</DependentUpon>

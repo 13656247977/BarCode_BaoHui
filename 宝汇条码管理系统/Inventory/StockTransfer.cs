@@ -298,56 +298,56 @@ namespace 宝汇条码管理系统.Inventory
                     this.Close();
                     break;
                 case "submit":
-                    long materialId=StringParse.ObjectToLong(tx_MaterialId.BindDataValue);
+                    long materialId=SParse.ToLong(tx_MaterialId.BindDataValue);
                     if (materialId<=0)
                     {
                         Toast("物料编码空或不正确，请重新扫码！");
                         return;
                     }
-                    long auxpropId = StringParse.ObjectToLong(tx_AuxpropId.BindDataValue);
+                    long auxpropId = SParse.ToLong(tx_AuxpropId.BindDataValue);
                     if (auxpropId<=0)
                     {
                         Toast("辅助属性空或不正确，请重新扫码！");
                         return;
                     }
-                    long lotId = StringParse.ObjectToLong(tx_lotId.BindDataValue);
-                    string lot_txt = StringParse.ObjectToString(tx_lotId.BindDisplayValue);
+                    long lotId = SParse.ToLong(tx_lotId.BindDataValue);
+                    string lot_txt = SParse.ToString(tx_lotId.BindDisplayValue);
                     if (lotId <= 0)
                     {
                         Toast("批号空或不正确，请重新扫码！");
                         return;
                     }
-                    long stockId = StringParse.ObjectToLong(tx_stockId.BindDataValue);
+                    long stockId = SParse.ToLong(tx_stockId.BindDataValue);
                     if (stockId <= 0)
                     {
                         Toast("调出仓库空或不正确，请重新扫码！");
                         return;
                     }
-                    long stockId_desc = StringParse.ObjectToLong(tx_stockId_desc.BindDataValue);
+                    long stockId_desc = SParse.ToLong(tx_stockId_desc.BindDataValue);
                     if (stockId_desc <= 0)
                     {
                         Toast("调入仓库空或不正确，请重新扫码！");
                         return;
                     }
-                    long unitId = StringParse.ObjectToLong(tx_UnitId.BindDataValue);
+                    long unitId = SParse.ToLong(tx_UnitId.BindDataValue);
                     if (unitId <= 0)
                     {
                         Toast("主单位空或不正确，请重新扫码！");
                         return;
                     }
-                    long auxUnitId = StringParse.ObjectToLong(tx_auxUnitId.BindDataValue);
+                    long auxUnitId = SParse.ToLong(tx_auxUnitId.BindDataValue);
                     if (auxUnitId <= 0)
                     {
                         Toast("辅单位空或不正确，请重新扫码！");
                         return;
                     }
-                    decimal qty = StringParse.ObjectToDecimal(tx_qty.BindDisplayValue);
+                    decimal qty = SParse.ToDecimal(tx_qty.BindDisplayValue);
                     if (qty <= 0)
                     {
                         Toast("主数量空或不正确，请重新输入！");
                         return;
                     }
-                    decimal auxQty = StringParse.ObjectToDecimal(tx_auxQty.BindDisplayValue);
+                    decimal auxQty = SParse.ToDecimal(tx_auxQty.BindDisplayValue);
                     if (auxQty <= 0)
                     {
                         Toast("辅数量空或不正确，请重新输入！");
@@ -360,9 +360,9 @@ namespace 宝汇条码管理系统.Inventory
                     }
                     try
                     {
-                        string stockLocId_desc = StringParse.ObjectToString(tx_stockLocId_desc.BindDisplayValue);
+                        string stockLocId_desc = SParse.ToString(tx_stockLocId_desc.BindDisplayValue);
                         ScanInfo scanInfo = new ScanInfo();
-                        scanInfo.barCode = StringParse.ObjectToBarCode(txt_Barcode.Text);
+                        scanInfo.barCode = SParse.ToBarCode(txt_Barcode.Text);
                         scanInfo.qty = qty;
                         scanInfo.auxQty = auxQty;
                         scanInfo.stockId = stockId_desc;

@@ -34,14 +34,14 @@ namespace 宝汇条码管理系统.UserContors
         {
             get
             {
-                return StringParse.ObjectToLong(this.tx_stockId.BindDataValue);
+                return SParse.ToLong(this.tx_stockId.BindDataValue);
             }
         }
         public long StockName
         {
             get
             {
-                return StringParse.ObjectToLong(this.tx_stockId.BindDisplayValue);
+                return SParse.ToLong(this.tx_stockId.BindDisplayValue);
             }
         }
         private void ibt_stock_src_Press(object sender, EventArgs e)
